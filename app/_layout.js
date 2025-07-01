@@ -1,5 +1,5 @@
 import { Stack } from "expo-router";
-import { ThemeProvider, useTheme } from "./context/ThemeContext";
+import ThemeProvider, { useTheme } from "../context/ThemeContext";
 import { TouchableOpacity, Text, Animated } from "react-native";
 import { useMemo, useRef, useEffect } from "react";
 
@@ -12,7 +12,7 @@ function HeaderRightButton({ toggleTheme, darkMode }) {
                     color: darkMode ? "#fff" : "#000",
                 }}
             >
-                {darkMode ? "🌞 Light" : "🌙 Dark"}
+                {darkMode ? "🌞" : "🌙"}
             </Animated.Text>
         </TouchableOpacity>
     );

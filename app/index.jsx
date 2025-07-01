@@ -3,7 +3,7 @@ import {
     View, Text, StyleSheet, Image, Linking, TouchableOpacity, ScrollView, Animated 
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
-import { useTheme } from "./context/ThemeContext";
+import { useTheme } from "../context/ThemeContext";
 
 const Profile = () => {
     const { darkMode } = useTheme();
@@ -48,7 +48,7 @@ const Profile = () => {
             {/* Profile */}
             <View style={styles.profileContainer}>
             <Image
-                source={{ uri: "https://i.pravatar.cc/150?img=12" }}
+                source={require("../assets/images/profile123.jpg")}
                 style={styles.avatar}
             />
             <Animated.Text style={[styles.name, { color: textColor }]}>
@@ -166,7 +166,7 @@ const Profile = () => {
             </Animated.View>
 
             {/* Stats */}
-            <Animated.View style={[styles.infoContainer, { backgroundColor: cardColor, shadowColor: shadowColor }]}>
+            {/* <Animated.View style={[styles.infoContainer, { backgroundColor: cardColor, shadowColor: shadowColor }]}>
             {[
                 { label: "Projects", value: "12" },
                 { label: "Followers", value: "340" },
@@ -179,7 +179,7 @@ const Profile = () => {
                 <Animated.Text style={styles.infoValue}>{item.value}</Animated.Text>
                 </View>
             ))}
-            </Animated.View>
+            </Animated.View> */}
         </Animated.View>
         </Animated.ScrollView>
     );
